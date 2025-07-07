@@ -1,0 +1,87 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    mode="side"
+    opened
+    class="sidenav"
+    [style.width]="isSideNavOpen ? '300px' : '100px'"
+    [style.transition]="'width 0.3s ease-in-out'"
+    [style.padding]="isSideNavOpen ? '1rem' : '0.5rem'"
+  >
+    <div class="profile-picture-container">
+      <img
+        src="/WhatsApp Image 2025-07-06 at 7.49.22 PM.jpeg"
+        alt="Profile Picture"
+        class="profile-picture"
+        [style.width]="isSideNavOpen ? '100px' : '50px'"
+        [style.height]="isSideNavOpen ? '100px' : '50px'"
+      />
+    </div>
+    <mat-list>
+      <mat-list-item class="list-item">
+        <a mat-list-item routerLink="/" class="list-item-link">
+          <mat-icon
+            class="list-item-icon"
+            [style.fontSize]="isSideNavOpen ? '1.5rem' : '1.25rem'"
+            >home</mat-icon
+          >
+          <span
+            class="list-item-text"
+            [style.display]="isSideNavOpen ? 'inline' : 'none'"
+            >Home</span
+          >
+        </a>
+      </mat-list-item>
+      <!-- <mat-divider></mat-divider> -->
+      <mat-list-item class="list-item">
+        <a mat-list-item routerLink="/skills" class="list-item-link">
+          <mat-icon
+            class="list-item-icon"
+            [style.fontSize]="isSideNavOpen ? '1.5rem' : '1.25rem'"
+            >school</mat-icon
+          >
+          <span
+            class="list-item-text"
+            [style.display]="isSideNavOpen ? 'inline' : 'none'"
+            style="flex-direction: column; justify-content: center"
+          >
+            <span>Education &</span>
+            <span> Skills</span>
+          </span>
+        </a>
+      </mat-list-item>
+      <!-- <mat-divider class="divider"></mat-divider> -->
+      <mat-list-item class="list-item">
+        <a mat-list-item routerLink="/experience" class="list-item-link">
+          <mat-icon
+            class="list-item-icon"
+            [style.fontSize]="isSideNavOpen ? '1.5rem' : '1.25rem'"
+            >work</mat-icon
+          >
+          <span
+            class="list-item-text"
+            [style.display]="isSideNavOpen ? 'inline' : 'none'"
+            >Experience</span
+          >
+        </a>
+      </mat-list-item>
+      <!-- <mat-divider class="divider"></mat-divider> -->
+      <mat-list-item class="list-item">
+        <a mat-list-item routerLink="/projects" class="list-item-link">
+          <mat-icon
+            class="list-item-icon"
+            [style.fontSize]="isSideNavOpen ? '1.5rem' : '1.25rem'"
+            >code</mat-icon
+          >
+          <span
+            class="list-item-text"
+            [style.display]="isSideNavOpen ? 'inline' : 'none'"
+            >Projects</span
+          >
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content" [style.margin-left]="isSideNavOpen ? '300px' : ' 100px'">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
